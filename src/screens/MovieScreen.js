@@ -21,6 +21,7 @@ import Cast from "../components/Cast";
 import PopularMovie from "../components/PopularMovie";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { LinearGradient } from "expo-linear-gradient";
+import HomeScreen from "../../assets/images/Homescreen1.png"
 
 var { width, height } = Dimensions.get("window");
 
@@ -241,7 +242,7 @@ export default function MovieScreen() {
       }}
     >
       <Image
-        source={require("../../assets/images/homescreen1.png")}
+        source={HomeScreen}
         style={{
           width: '100%',
           height: '100%',
