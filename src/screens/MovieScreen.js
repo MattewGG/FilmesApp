@@ -1,19 +1,7 @@
-import {
-  View,
-  Text,
-  Dimensions,
-  ScrollView,
-  TouchableOpacity,
-  Image,
-} from "react-native";
+import {View,Text,Dimensions,ScrollView,TouchableOpacity,Image,} from "react-native";
 import React, { useState, useEffect } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
-import {
-  fetchMovieCredits,
-  fetchMovieDetails,
-  fetchSimilarMovies,
-  image500,
-} from "../../utils/moviesapi";
+import {fetchMovieCredits,fetchMovieDetails,fetchSimilarMovies,image500,} from "../../utils/moviesapi";
 import { ChevronLeftIcon } from "react-native-heroicons/outline";
 import { HeartIcon } from "react-native-heroicons/solid";
 import Loading from "../components/Loading";
@@ -21,6 +9,7 @@ import Cast from "../components/Cast";
 import PopularMovie from "../components/PopularMovie";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { LinearGradient } from "expo-linear-gradient";
+import HomeScreen from "../../assets/images/Homescreen1.png"
 
 var { width, height } = Dimensions.get("window");
 
@@ -82,7 +71,6 @@ export default function MovieScreen() {
       return `${hours}h ${minutes}mins`;
     }
   };
-  // console.log("Movie Details", movie);
 
   // Function to Add Movie to Saved Screen
 
@@ -242,7 +230,7 @@ export default function MovieScreen() {
       }}
     >
       <Image
-        source={require("../../assets/images/homescreen1.png")}
+        source={HomeScreen}
         style={{
           width: '100%',
           height: '100%',

@@ -3,32 +3,31 @@ import axios from "axios";
 
 // Endpoints
 const apiBaseUrl = "https://api.themoviedb.org/3";
-const trendingMoviesEndpoint = `${apiBaseUrl}/trending/movie/day?api_key=${movieapikey}`;
-const popularMoviesEndpoint = `${apiBaseUrl}/movie/popular?api_key=${movieapikey}`;
-const upComingMoviesEndpoint = `${apiBaseUrl}/movie/upcoming?api_key=${movieapikey}`;
-const topRatedMoviesEndpoint = `${apiBaseUrl}/movie/top_rated?api_key=${movieapikey}`;
-const genresEndpoint = `${apiBaseUrl}/genre/movie/list?api_key=${movieapikey}`;
-const searchMoviesEndpoint = `${apiBaseUrl}/search/movie?api_key=${movieapikey}`;
+const trendingMoviesEndpoint = `${apiBaseUrl}/trending/movie/day?api_key=${movieapikey}&language=pt-BR`;
+const popularMoviesEndpoint = `${apiBaseUrl}/movie/popular?api_key=${movieapikey}&language=pt-BR`;
+const upComingMoviesEndpoint = `${apiBaseUrl}/movie/upcoming?api_key=${movieapikey}&language=pt-BR`;
+const topRatedMoviesEndpoint = `${apiBaseUrl}/movie/top_rated?api_key=${movieapikey}&language=pt-BR`;
+const genresEndpoint = `${apiBaseUrl}/genre/movie/list?api_key=${movieapikey}&language=pt-BR`;
+const searchMoviesEndpoint = `${apiBaseUrl}/search/movie?api_key=${movieapikey}&language=pt-BR`;
 
-// Endpoind pros detalhes do filme :)
+// Endpoint para detalhes do filme
 const movieDetailsEndpoint = (id) =>
-  `${apiBaseUrl}/movie/${id}?api_key=${movieapikey}`;
+  `${apiBaseUrl}/movie/${id}?api_key=${movieapikey}&language=pt-BR`;
 
 const movieCreditsEndpoint = (id) =>
-  `${apiBaseUrl}/movie/${id}/credits?api_key=${movieapikey}`;
+  `${apiBaseUrl}/movie/${id}/credits?api_key=${movieapikey}&language=pt-BR`;
 
 const similarMoviesEndpoint = (id) =>
-  `${apiBaseUrl}/movie/${id}/similar?api_key=${movieapikey}`;
+  `${apiBaseUrl}/movie/${id}/similar?api_key=${movieapikey}&language=pt-BR`;
 
-// Cast Api chamada pra mostrar o cast do filme 
+// Chamada para detalhes da pessoa (elenco)
 const personDetailsEndpoint = (id) =>
-  `${apiBaseUrl}/person/${id}?api_key=${movieapikey}`;
+  `${apiBaseUrl}/person/${id}?api_key=${movieapikey}&language=pt-BR`;
 
 const personMovieEndpoint = (id) =>
-  `${apiBaseUrl}/person/${id}/movie_credits?api_key=${movieapikey}`;
+  `${apiBaseUrl}/person/${id}/movie_credits?api_key=${movieapikey}&language=pt-BR`;
 
-// Chamada de filmes 
-
+// Função para chamada da API de filmes
 const movieApiCall = async (endpoints, params) => {
   const options = {
     method: "GET",
@@ -45,11 +44,11 @@ const movieApiCall = async (endpoints, params) => {
   }
 };
 
-// Poster dos filmes 
+// Função para retornar a imagem do poster dos filmes
 export const image500 = (posterpath) =>
   posterpath ? "https://image.tmdb.org/t/p/w500" + posterpath : null;
 
-// Tela home
+// Funções para chamadas de filmes
 export const fetchTrendingMovie = () => {
   return movieApiCall(trendingMoviesEndpoint);
 };
@@ -86,7 +85,7 @@ export const searchMovies = (params) => {
   return movieApiCall(searchMoviesEndpoint, params);
 };
 
-// Detalhes das pessoas 
+// Funções para detalhes de pessoas (elenco)
 export const fetchPersonDetails = (id) => {
   return movieApiCall(personDetailsEndpoint(id));
 };

@@ -6,7 +6,7 @@ import MovieCard from "../MovieCard";
 
 var { width } = Dimensions.get("window");
 
-export default function TrendingMovies({ data }) {
+export default function TrendingMovies({ data, title}) {
   // console.log("Trending Movies", data);
   const navigation = useNavigation();
 
@@ -20,6 +20,8 @@ export default function TrendingMovies({ data }) {
       <Text style={{ color: 'white', fontSize: 18, fontWeight: 'bold', marginHorizontal: 16, marginBottom: 16 }}>
         Em alta 
       </Text>
+      <Text style={{ color: 'white', fontSize: 18, fontWeight: 'bold' }}>{title}</Text>
+      
     </View>
   
     {/* Carousal */}
