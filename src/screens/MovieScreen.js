@@ -1,19 +1,7 @@
-import {
-  View,
-  Text,
-  Dimensions,
-  ScrollView,
-  TouchableOpacity,
-  Image,
-} from "react-native";
+import {View,Text,Dimensions,ScrollView,TouchableOpacity,Image,} from "react-native";
 import React, { useState, useEffect } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
-import {
-  fetchMovieCredits,
-  fetchMovieDetails,
-  fetchSimilarMovies,
-  image500,
-} from "../../utils/moviesapi";
+import {fetchMovieCredits,fetchMovieDetails,fetchSimilarMovies,image500,} from "../../utils/moviesapi";
 import { ChevronLeftIcon } from "react-native-heroicons/outline";
 import { HeartIcon } from "react-native-heroicons/solid";
 import Loading from "../components/Loading";
@@ -83,7 +71,6 @@ export default function MovieScreen() {
       return `${hours}h ${minutes}mins`;
     }
   };
-  // console.log("Movie Details", movie);
 
   // Function to Add Movie to Saved Screen
 

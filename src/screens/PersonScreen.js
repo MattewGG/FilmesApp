@@ -1,21 +1,11 @@
-import {
-  View,
-  Text,
-  ScrollView,
-  Image,
-  Dimensions,
-  TouchableOpacity,
-} from "react-native";
+import {View,Text,ScrollView,Image,Dimensions,TouchableOpacity,} from "react-native";
 import React, { useEffect, useState } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
-import {
-  fetchPersonDetails,
-  fetchPersonMovies,
-  image500,
-} from "../../utils/moviesapi";
+import {fetchPersonDetails,fetchPersonMovies,image500,} from "../../utils/moviesapi";
 import { XMarkIcon } from "react-native-heroicons/outline";
 import Loading from "../components/Loading";
 import PopularMovie from "../components/PopularMovie";
+import Home from "../../assets/images/homescreen1.png"
 
 const { width, height } = Dimensions.get("window");
 
@@ -64,7 +54,7 @@ export default function PersonScreen() {
       }}
     >
       <Image
-        source={require("../../assets/images/homescreen1.png")}
+        source={Home}
         style={{
           width: width,
           height: "100%",
