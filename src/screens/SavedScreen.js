@@ -61,7 +61,7 @@ export default function SavedScreen() {
       <View style={{ marginTop: 48, padding: 16 }}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
           <Text style={{ fontWeight: 'bold', fontSize: 24, color: 'white' }}>
-            Saved Movies
+            Filmes salvos
           </Text>
           <TouchableOpacity
             onPress={clearSavedMovies}
