@@ -232,12 +232,13 @@ export default function MovieScreen() {
     <View
       style={{
         flex: 1,
-        backgroundColor: 'white',
+        backgroundColor: 'gray',
         paddingVertical: 16,
         marginTop: -98,
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
         overflow: 'hidden',
+        color: 'white'
       }}
     >
       <Image
@@ -256,7 +257,7 @@ export default function MovieScreen() {
       <View style={{ padding: 16 }}>
         <Text
           style={{
-            color: 'white',
+            color: 'black',
             textAlign: 'left',
             fontSize: 24,
             fontWeight: 'bold',
@@ -275,7 +276,7 @@ export default function MovieScreen() {
               <Text
                 key={index}
                 style={{
-                  color: '#a8a8a8',
+                  color: '#f2f2f2',
                   fontWeight: '600',
                   fontSize: 16,
                   textAlign: 'center',
@@ -316,7 +317,7 @@ export default function MovieScreen() {
         {/* Descrição */}
         <Text
           style={{
-            color: '#d3d3d3',
+            color: '#f2f2f2',
             fontSize: 14,
             letterSpacing: 1.2,
             lineHeight: 24,
