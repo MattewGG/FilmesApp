@@ -23,7 +23,7 @@ export default function SavedScreen() {
 
   useFocusEffect(
     useCallback(() => {
-      // Load saved movies from AsyncStorage when the screen gains focus
+     
       const loadSavedMovies = async () => {
         try {
           const savedMovies = await AsyncStorage.getItem("savedMovies");
